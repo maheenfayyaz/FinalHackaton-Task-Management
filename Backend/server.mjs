@@ -15,7 +15,7 @@ app.use(cors({
   origin:[
     'http://localhost:5173',
     'http://localhost:5174',
-    'https://final-hackaton-task-management.vercel.app/'
+    'https://final-hackaton-task-management.vercel.app'
   ]
 }));
 app.use(express.json());

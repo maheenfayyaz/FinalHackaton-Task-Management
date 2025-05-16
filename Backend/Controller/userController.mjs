@@ -76,7 +76,7 @@ const forget = async (req, res) => {
         }
         const secret = process.env.JWT_SECRET_KEY + seasonedUser.password;
         const token = jwt.sign({ email: seasonedUser.email, id: seasonedUser._id }, secret, { expiresIn: '30m' });
-        const link = `http://localhost:5173/resetpassword/${seasonedUser._id}/${token}`;
+        const link = `${process.env.FRONTEND_URL}/resetpassword/${seasonedUser._id}/${token}`;
         var transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {

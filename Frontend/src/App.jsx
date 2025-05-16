@@ -8,7 +8,6 @@ import CreateTaskForm from "./pages/CreateTaskForm"
 import ResetPassword from "./pages/ResetPassword"
 import { useSelector} from 'react-redux'
 
-
 function App() {
 
   const userName = useSelector((state) => state.auth.userName);

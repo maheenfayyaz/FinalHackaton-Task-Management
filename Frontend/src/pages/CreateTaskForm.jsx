@@ -20,7 +20,7 @@ const CreateTaskForm = () => {
   const [isEditMode, setIsEditMode] = useState(false);
   const [taskId, setTaskId] = useState(null);
 
-  const apiUrl = import.meta.env.VITE_API_BASE_URL;
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     if (location.state && location.state.task) {

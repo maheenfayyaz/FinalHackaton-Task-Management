@@ -9,7 +9,7 @@ import '../assets/css/style.css';
 import { login } from '../store/authSlice.mjs';
 import { useDispatch } from 'react-redux';
 
-const apiUrl = import.meta.env.VITE_API_BASE_URL;
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const Login = () => {
     const navigate = useNavigate();

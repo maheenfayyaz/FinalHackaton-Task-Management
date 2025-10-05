@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 import { FaLock } from 'react-icons/fa';
 import '../assets/css/style.css';
 
-const apiUrl = import.meta.env.VITE_API_BASE_URL;
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const ResetPassword = () => {
   console.log("apiUrl:", apiUrl);

@@ -19,7 +19,7 @@ const Showalltask = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/getalltasks', {
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/getalltasks`, {
           headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`,
@@ -61,7 +61,7 @@ const Showalltask = () => {
 
     if (result.isConfirmed) {
       try {
-        const response = await axios.delete(`http://localhost:5000/api/deletetask/${taskId}`, {
+        const response = await axios.delete(`${process.env.REACT_APP_API_URL}/api/deletetask/${taskId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -112,7 +112,7 @@ const Showalltask = () => {
       } else {
         payload = { status: destStatus };
       }
-      const response = await axios.put(`http://localhost:5000/api/updatetask/${draggableId}`, payload, {
+      const response = await axios.put(`${process.env.REACT_APP_API_URL}/api/updatetask/${draggableId}`, payload, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`,

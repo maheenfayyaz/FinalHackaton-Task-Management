@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 import { useDispatch } from 'react-redux';
 import { login } from '../store/authSlice.mjs';
 
-const apiUrl = import.meta.env.REACT_APP_API_URL ? import.meta.env.REACT_APP_API_URL.replace(/\/$/, '') + '/api' : '';
+const apiUrl = import.meta.env.REACT_APP_API_URL ? import.meta.env.REACT_APP_API_URL + '/api' : '';
 
 const Signup = () => {
   const navigate = useNavigate();

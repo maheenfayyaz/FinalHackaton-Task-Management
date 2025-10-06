@@ -19,7 +19,7 @@ const Showalltask = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.REACT_APP_API_URL}/api/getalltasks`, {
+        const response = await axios.get(`${import.meta.env.REACT_APP_API_URL}/getalltasks`, {
           headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`,
@@ -61,7 +61,7 @@ const handleDelete = async (taskId) => {
 
   if (result.isConfirmed) {
     try {
-      const response = await axios.delete(`${import.meta.env.REACT_APP_API_URL}/api/deletetask/${taskId}`, {
+      const response = await axios.delete(`${import.meta.env.REACT_APP_API_URL}/deletetask/${taskId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -112,7 +112,7 @@ const onDragEnd = async (result) => {
     } else {
       payload = { status: destStatus };
     }
-    const response = await axios.put(`${import.meta.env.REACT_APP_API_URL}/api/updatetask/${draggableId}`, payload, {
+    const response = await axios.put(`${import.meta.env.REACT_APP_API_URL}/updatetask/${draggableId}`, payload, {
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,

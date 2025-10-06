@@ -71,7 +71,7 @@ const Profile = () => {
         if (currentPassword) formData.append('currentPassword', currentPassword);
         if (newPassword) formData.append('newPassword', newPassword);
 
-        const response = await axios.put(`${import.meta.env.REACT_APP_API_URL}/api/updateprofile`, formData, {
+        const response = await axios.put(`${import.meta.env.REACT_APP_API_URL}/updateprofile`, formData, {
           headers: {
             Authorization: `Bearer ${token}`,
             'Content-Type': 'multipart/form-data'
@@ -110,7 +110,7 @@ const Profile = () => {
           }
         };
 
-        const response = await axios.put(`${import.meta.env.REACT_APP_API_URL}/api/updateprofile`, updateData, config);
+        const response = await axios.put(`${import.meta.env.REACT_APP_API_URL}/updateprofile`, updateData, config);
 
         if (response.status === 200) {
           Swal.fire({
